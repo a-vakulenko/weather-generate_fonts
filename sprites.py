@@ -31,12 +31,13 @@ def image_to_sprite(image):
 		sprite.append(row)
 	return sprite
 
+# Unicode blocks:
 character_ranges = []
-character_ranges.append(range(0x21, 0x7F+1)) # basic-latin (ascii)
-#character_ranges.append(range(0xA1, 0xFF+1)) # latin-1-supplement
-#character_ranges.append(range(0x100, 0x17F+1)) # latin-extended-a
-#character_ranges.append(range(0x180, 0x24F+1)) # latin-extended-b
-#character_ranges.append(range(0x400, 0x4FF+1)) # cyrillic
+character_ranges.append(range(0x20, 0x7F+1)) # Basic Latin (ascii)
+#character_ranges.append(range(0xA1, 0xFF+1)) # Latin-1 Supplement
+#character_ranges.append(range(0x100, 0x17F+1)) # Latin Extended-A
+#character_ranges.append(range(0x180, 0x24F+1)) # Latin Extended-B
+#character_ranges.append(range(0x410, 0x44F+1)) # Cyrillic (только русские буквы)
 #character_ranges.append([0x2103]) # ℃
 
 weather_character_ranges = []
@@ -44,8 +45,8 @@ weather_character_ranges.append(range(0xF000, 0xF0EA+1)) # weather icons
 
 fonts = {
 	#'Arial': [ 18, 24 ],
-	'NotoSansMono-Regular': [ 18, 24 ],
-	'WeatherIcons-Regular': [ 24, 32 ]
+	'NotoSansMono-Regular': [ 18, 24, 32, 38 ],
+	'WeatherIcons-Regular': [ 24, 32, 38 ]
 }
 
 sprites = {}
